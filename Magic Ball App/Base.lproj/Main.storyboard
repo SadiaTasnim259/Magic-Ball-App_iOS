@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_Ball_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gps-Hu-EkG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l-intro-1667316814" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-T7-pXa">
+                                        <rect key="frame" x="76.666666666666686" y="315.66666666666669" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="hwF-dD-3km"/>
+                                            <constraint firstAttribute="width" constant="240" id="n72-ri-8AA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Any Anime Hero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNd-mw-H0L">
+                                        <rect key="frame" x="94.666666666666686" y="80" width="204" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Clk-o1-vCh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1B-w0-Xlu">
+                                        <rect key="frame" x="169.66666666666666" y="518.66666666666663" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ZTQ-w6-SSx"/>
+                                            <constraint firstAttribute="width" constant="60" id="uZb-mp-UWS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="SEE">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="seeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJT-7E-3tX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99667197470000002" green="0.92185157539999996" blue="0.92136633400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lxs-T7-pXa" firstAttribute="centerY" secondItem="gps-Hu-EkG" secondAttribute="centerY" id="0fR-PO-hAv"/>
+                                    <constraint firstItem="x1B-w0-Xlu" firstAttribute="leading" secondItem="gps-Hu-EkG" secondAttribute="leading" constant="169.5" id="8Rm-NQ-JJ4"/>
+                                    <constraint firstItem="BNd-mw-H0L" firstAttribute="top" secondItem="gps-Hu-EkG" secondAttribute="top" constant="80" id="CYE-F3-OTi"/>
+                                    <constraint firstItem="BNd-mw-H0L" firstAttribute="leading" secondItem="gps-Hu-EkG" secondAttribute="leading" constant="94.5" id="Kog-9J-MCx"/>
+                                    <constraint firstItem="x1B-w0-Xlu" firstAttribute="top" secondItem="lxs-T7-pXa" secondAttribute="bottom" constant="75" id="TPS-A0-IiH"/>
+                                    <constraint firstAttribute="trailing" secondItem="BNd-mw-H0L" secondAttribute="trailing" constant="94.5" id="oho-St-p0S"/>
+                                    <constraint firstItem="lxs-T7-pXa" firstAttribute="centerX" secondItem="gps-Hu-EkG" secondAttribute="centerX" id="wFs-9R-xWN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gps-Hu-EkG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Af1-Zk-QzC"/>
+                            <constraint firstAttribute="bottom" secondItem="gps-Hu-EkG" secondAttribute="bottom" constant="34" id="W8w-pH-Y3F"/>
+                            <constraint firstItem="gps-Hu-EkG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="WcY-1q-qT6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gps-Hu-EkG" secondAttribute="trailing" id="rUc-Jt-nMe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lxs-T7-pXa" id="KhU-bz-DOo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="78.625954198473281" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="l-intro-1667316814" width="1600" height="899"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
